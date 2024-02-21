@@ -17,6 +17,6 @@ for x in range(6):
 #Exercise 4
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:
-    if x == "banana":
+    if x == "bo":
         break
     print(x)

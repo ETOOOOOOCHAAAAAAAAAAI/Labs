@@ -1,5 +1,5 @@
 #Exercise 1
-True
+print(10 > 9)
 
 #Exercise 2
 False
