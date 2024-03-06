@@ -13,6 +13,4 @@ def test_path(path):
 
 
 path_to_check = "C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB"
-
-# Вызов функции с примером пути
 test_path(path_to_check)
