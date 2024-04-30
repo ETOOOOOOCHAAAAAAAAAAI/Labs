@@ -21,7 +21,7 @@ FPS = 60
 font = pygame.font.Font(None, 36)
 coins_collected = 0
 
-# класс монеты
+# класс монеты возмжоно придется удалять desktop
 class Coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()

@@ -4,11 +4,11 @@ import pygame
 pygame.init()
 pygame.mixer.init()
 
-# Загрузка треков
+# Загрузка треков возможно придется удалять desktop
 tracks = [
-    'C:/Users/ASUS TUF Gaming F15/Downloads/Fabrizio_Paterlini_-_Snow_(musmore.com) (7).mp3',
-    'C:/Users/ASUS TUF Gaming F15/Downloads/lab 7_music_Peter_Sandberg_-_Dismantle_(musmore.com).mp3',
-    'C:/Users/ASUS TUF Gaming F15/Downloads/Lindsey_Stirling_-_Heist_(musmore.com).mp3'
+    'C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB/LAB7/Fabrizio_Paterlini_-_Snow_(musmore.com) (7).mp3',
+    'C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB/LAB7/lab 7_music_Peter_Sandberg_-_Dismantle_(musmore.com).mp3',
+    'C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB/LAB7/Lindsey_Stirling_-_Heist_(musmore.com).mp3'
 ]
 current_track = 0
 
@@ -43,10 +43,6 @@ while running:
                 # Предыдущий трек
                 current_track = (current_track - 1) % len(tracks)
                 play_track()
-
-
-    # Здесь может быть код для отрисовки интерфейса или других элементов
-    # ...
 
     pygame.display.flip()
 

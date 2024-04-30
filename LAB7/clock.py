@@ -7,10 +7,10 @@ screen = pg.display.set_mode((800, 800))
 window_title = pg.display.set_caption("mickey mouse clock")
 clock = pg.time.Clock()
 
-# loading the images
-bg_surf = pg.image.load(r"C:/Users/ASUS TUF Gaming F15/Downloads/mainclock.png")
-leftarm_surf = pg.image.load(r"C:/Users/ASUS TUF Gaming F15/Downloads/leftarm.png")
-rightarm_surf = pg.image.load(r"C:/Users/ASUS TUF Gaming F15/Downloads/rightarm.png")
+# loading the images возможно придется удалять desktop
+bg_surf = pg.image.load(r"C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB/LAB7/mainclock.png")
+leftarm_surf = pg.image.load(r"C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB/LAB7/leftarm.png")
+rightarm_surf = pg.image.load(r"C:/Users/ASUS TUF Gaming F15/Desktop/PP2LAB/LAB7/rightarm.png")
 bg_rect = bg_surf.get_rect(center = (400, 400))
 
 done = False
