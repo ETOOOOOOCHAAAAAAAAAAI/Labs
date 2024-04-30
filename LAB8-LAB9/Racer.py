@@ -100,12 +100,12 @@ while True:
             entity.update()
         else:
             entity.move()
-    # Обработка столкновений с монетками
+
     collected_coins = pygame.sprite.spritecollide(P1, coins, True)  # True удалит монетку при столкновении
     if collected_coins:
         coins_collected += len(collected_coins)
 
-    # Отрисовка количества монеток
+
     text = font.render(f"Coins: {coins_collected}", True, BLACK)
     display.blit(text, (SCREEN_WIDTH - 150, 10))
     # To be run if collision occurs between Player and Enemy
