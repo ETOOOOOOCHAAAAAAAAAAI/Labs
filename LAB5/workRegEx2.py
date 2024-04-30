@@ -7,3 +7,4 @@ def finda_and_2_or_b(string):
 
 print(finda_and_2_or_b("abbbb"))
 print(finda_and_2_or_b("abb"))
+print(finda_and_2_or_b("cabbb"))

@@ -4,7 +4,6 @@ file_path = 'C:/Users/ASUS TUF Gaming F15/Downloads/sample-data.json'
 
 with open(file_path, "r") as file:
     data = json.load(file)
-print(data.keys())
 
 interfaces = data['imdata']
 print("Interface Status")
