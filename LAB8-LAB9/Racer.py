@@ -3,7 +3,7 @@ import time
 import pygame
 import random
 from pygame.locals import *
-
+# базовые параметры для удобный работы и параметры для окна и частота обновлеий кадров в сек
 pygame.init()
 pygame.display.set_caption("Racer")
 BLUE = (0, 0, 255)
@@ -21,11 +21,11 @@ FPS = 60
 font = pygame.font.Font(None, 36)
 coins_collected = 0
 
-
+# класс монеты
 class Coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("C://Users//ASUS TUF Gaming F15//Downloads//coin_2.png")
+        self.image = pygame.image.load("C://Users//ASUS TUF Gaming F15//Desktop//PP2LAB//LAB8-LAB9//coin_2.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
 
@@ -34,11 +34,11 @@ class Coin(pygame.sprite.Sprite):
         if self.rect.top > SCREEN_HEIGHT:
             self.kill()  # Удаляем монету, если она вышла за пределы экрана
 
-
+# класс врага
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("C://Users//ASUS TUF Gaming F15//Downloads//blue1.png")
+        self.image = pygame.image.load("C://Users//ASUS TUF Gaming F15//Desktop//PP2LAB//LAB8-LAB9//blue1.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
 
@@ -48,11 +48,11 @@ class Enemy(pygame.sprite.Sprite):
             self.rect.top = 0
             self.rect.center = (random.randint(30, 370), 0)
 
-
+#класс игрока
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.image.load("C://Users//ASUS TUF Gaming F15//Downloads//red1.png")
+        self.image = pygame.image.load("C://Users//ASUS TUF Gaming F15//Desktop//PP2LAB//LAB8-LAB9//red1.png")
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
 
@@ -68,7 +68,7 @@ class Player(pygame.sprite.Sprite):
 
 P1 = Player()
 E1 = Enemy()
-
+# создание групы для удобной работы и обявлеление кастомных ивентов
 enemies = pygame.sprite.Group()
 enemies.add(E1)
 all_sprites = pygame.sprite.Group()
@@ -79,7 +79,7 @@ INC_SPEED = pygame.USEREVENT + 1
 pygame.time.set_timer(INC_SPEED, 1000)
 CREATE_COIN = pygame.USEREVENT + 2
 pygame.time.set_timer(CREATE_COIN, 1000)
-
+#цикл игры
 while True:
     for event in pygame.event.get():
         if event.type == INC_SPEED:
@@ -108,7 +108,7 @@ while True:
 
     text = font.render(f"Coins: {coins_collected}", True, BLACK)
     display.blit(text, (SCREEN_WIDTH - 150, 10))
-    # To be run if collision occurs between Player and Enemy
+    #столкновение игрока и врага
     if pygame.sprite.spritecollideany(P1, enemies):
         display.fill(RED)
         pygame.display.update()
