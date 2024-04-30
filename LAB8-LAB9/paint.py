@@ -58,13 +58,14 @@ while running:
         # Обработка нажатий клавиш
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r:
-                current_tool = 'rectangle'
+                current_tool = 'rectangle'      #рисовка прямоугольника на кнопку r
             elif event.key == pygame.K_c:
-                current_tool = 'circle'
+                current_tool = 'circle'     #рисовка круга на кнопку c
             elif event.key == pygame.K_p:
-                current_tool = 'pencil'
+                current_tool = 'pencil'     #переход на карандаш на кнопку p
             elif event.key == pygame.K_e:
                 current_color = WHITE  # Использовать белый цвет для стирания
+            # измена цветов карандаша
             elif event.key == pygame.K_1:
                 current_color = BLACK
             elif event.key == pygame.K_2:
